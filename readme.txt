@@ -3,6 +3,9 @@ For installing make sure you have npm up and running on your local machine you c
 download it from:
 https://nodejs.org/en/download/
 
+clone or download app from:
+https://github.com/alisrbdni/TechTestLawPath
+
 go to the root of application and in your cmd/terminal enter
 npm install
 
