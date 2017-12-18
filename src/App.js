@@ -65,7 +65,6 @@ class App extends React.Component {
         this.setState({ message: 'An error occured' + ex });
       })
     console.log("done");
-    { this.state.message }
   };
 
 
