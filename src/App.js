@@ -50,7 +50,7 @@ class App extends React.Component {
           }
           else if (target[i].location === suburb) {
             if (target[i].state != states) {
-              this.setState({ message: 'Your state is wrong' + states + ', does not match ' + target[i].state + ' as the correct state', bgColor: 'red' });
+              this.setState({ message: 'Your state is wrong,' + states + ', does not match ' + target[i].state + ' as the correct state', bgColor: 'red' });
             }
           } else if (target[i].state == states) {
             if (target[i].location != suburb)
