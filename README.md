@@ -1,6 +1,6 @@
 
-For installing make sure you have npm up and running on your local machine you can
-download it from:
+For installing make sure you have npm up and running on your local machine
+you can download it from:
 https://nodejs.org/en/download/
 
 clone or download app from:
