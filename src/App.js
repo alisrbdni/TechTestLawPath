@@ -23,7 +23,7 @@ class App extends React.Component {
     //https://ancient-spire-39579.herokuapp.com 
     // to proxy data as auspost did not allow cors from browser
     var proxyUrl = 'https://ancient-spire-39579.herokuapp.com/';
-    var targetUrl = 'https://digitalapi.auspost.com.au/postcode/search.json?q=' + postcode ;
+    var targetUrl = 'https://digitalapi.auspost.com.au/postcode/search.json?q=' + postcode;
     fetch(proxyUrl + targetUrl, {
       method: 'get',
       headers: {
@@ -42,7 +42,8 @@ class App extends React.Component {
         })
         console.log(json)
         var target = json.localities.locality;
-        for (var i = 0; i < target.length; i++) {
+        if(target.constructor === Array){
+          for (var i = 0; i < target.length; i++) {
           if (target[i].state === states && target[i].location === suburb) {
 
             this.setState({ message: 'Your postcode,suburb and state match,congrats', bgColor: 'green' });
@@ -59,6 +60,23 @@ class App extends React.Component {
           }
 
         }
+      }else{
+        if (target.state === states && target.location === suburb) {
+
+            this.setState({ message: 'Your postcode,suburb and state match,congrats', bgColor: 'green' });
+            return
+          }
+          else if (target.location === suburb) {
+            if (target.state != states) {
+              this.setState({ message: 'Your state is wrong,' + states + ', does not match ' + target.state + ' as the correct state', bgColor: 'red' });
+            }
+          } else if (target.state == states) {
+            if (target.location != suburb)
+              this.setState({ message: '' + suburb + ' suburb does not belong to ' + postcode + ' postcode', bgColor: 'red' });
+
+          }
+      }
+        
       })
       .catch((ex) => {
         console.log('parsing failed', ex)
