@@ -23,7 +23,7 @@ class App extends React.Component {
     //https://ancient-spire-39579.herokuapp.com 
     // to proxy data as auspost did not allow cors from browser
     var proxyUrl = 'https://ancient-spire-39579.herokuapp.com/';
-    var targetUrl = 'https://digitalapi.auspost.com.au/postcode/search.json?q=' + postcode + '&excludePostBoxFlag=true';
+    var targetUrl = 'https://digitalapi.auspost.com.au/postcode/search.json?q=' + postcode ;
     fetch(proxyUrl + targetUrl, {
       method: 'get',
       headers: {
