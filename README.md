@@ -1,3 +1,5 @@
+React app using auspost api to check if <br />
+postcode , suburb and state entered by user match.
 
 For installing make sure you have npm up and running on your local machine you can
 download it from:<br />
@@ -14,4 +16,4 @@ npm start
 
 App is now running at <br />localhost:3000
 
-developed by sarabadaniali@yahoo.com as a technical test.
+developed by sarabadaniali@yahoo.com for testing https://developers.auspost.com.au/ api.
