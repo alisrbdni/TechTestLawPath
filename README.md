@@ -6,7 +6,7 @@ download it from:<br />
 https://nodejs.org/en/download/
 
 clone or download app from:<br />
-https://github.com/alisrbdni/TechTestLawPath
+https://github.com/alisrbdni/postcoder
 
 go to the root of application and in your cmd/terminal enter<br />
 npm install
